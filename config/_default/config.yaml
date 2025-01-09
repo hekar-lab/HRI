@@ -1,0 +1,42 @@
+title: HRI
+baseURL: https://hekar.org/
+languageCode: en-us
+
+params:
+  assets:
+    favicon: "icons/favicons/HRI_icon_64.png"
+    favicon16x16: "icons/favicons/HRI_icon_16.png"
+    favicon32x32: "icons/favicons/HRI_icon_32.png"
+
+disableKinds:
+- taxonomy
+- term
+
+outputs:
+  home:
+  - HTML
+  page:
+  - HTML
+  section:
+  - HTML
+  - JSON
+
+markup:
+  goldmark:
+    parser:
+      wrapStandAloneImageWithinParagraph: false
+  highlight:
+    anchorLineNos: false
+    codeFences: true
+    guessSyntax: false
+    hl_Lines: ""
+    hl_inline: false
+    lineAnchors: ""
+    lineNoStart: 1
+    lineNos: false
+    lineNumbersInTable: true
+    noClasses: false
+    noHl: false
+    style: monokai
+    tabWidth: 4
+    wrapperClass: highlight

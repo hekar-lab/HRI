@@ -1,0 +1,16 @@
+{{- define "body" }}
+
+<header class="search">
+    <p>ACId search:&nbsp;</p>
+    <input type="text" id="ACId" size="12" value="*|**|**|****"/>
+    {{- partial "go-back" . }}
+</header>
+<main class="archives">
+    <div id="res-container">
+        <div id="archive-box-back"></div>
+        <ul id="results"></ul>
+        <div id="archive-box-front"></div>
+    </div>
+</main>
+
+{{- end }}

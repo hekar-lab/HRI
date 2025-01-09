@@ -1,0 +1,29 @@
+{{- define "body" }}
+
+{{- if .Content }}
+<main class="centered">
+    <div class="reception">
+        <div class="card-scene" id="scene">
+            <div class="card" id="card">
+                <div class="card-front face">
+                    {{ .Content }}
+                </div>
+                <div class="card-back face">
+                    <div class="logo">
+                        <img src='{{ .Params.assets.logo | default "logo.png" | absURL }}'/>
+                    </div>
+                </div>
+                <div class="card-left face"></div>
+                <div class="card-right face"></div>
+                <div class="card-up face"></div>
+                <div class="card-down face"></div>
+            </div>
+        </div>
+        <button class="rotate clickable-div" id="rotate-button">
+            <span class="icon-3 rotate-icon"></span>
+        </button>
+    </div>
+</main>
+{{- end }}
+
+{{- end }}

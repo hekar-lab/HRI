@@ -1,0 +1,66 @@
+div.board {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4rem;
+    grid-column: 2;
+    grid-row: 2;
+}
+
+div.bulletin {
+    width: var(--main-width);
+    background: var(--base1);
+    border: 1px solid var(--base8);
+    position: relative;
+    padding: 2.5rem var(--main-margin);
+    box-shadow: 5px 5px var(--base5);
+}
+
+div.bulletin::before {
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    background-color: var(--base6);
+    top: 1rem;
+    left: calc(var(--main-width)/2 + var(--main-margin) - .5rem);
+    border-radius: 100%;
+    border: 1px solid var(--base8);
+    box-shadow: 1px 1px var(--base4);
+}
+
+div.bulletin.red::before {
+    background-color: var(--red);
+}
+
+div.bulletin.orange::before {
+    background-color: var(--orange);
+}
+
+div.bulletin.yellow::before {
+    background-color: var(--yellow);
+}
+
+div.bulletin.green::before {
+    background-color: var(--green);
+}
+
+div.bulletin.cyan::before {
+    background-color: var(--cyan);
+}
+
+div.bulletin.blue::before {
+    background-color: var(--blue);
+}
+
+div.bulletin.violet::before {
+    background-color: var(--violet);
+}
+
+div.bulletin.magenta::before {
+    background-color: var(--magenta);
+}
+
+.date {
+    display: flex;
+    justify-content: right;
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg viewBox="0 0 42 42" width="42" height="42" xmlns="http://www.w3.org/2000/svg">
+  <style>
+      .pixart2svg {
+        color-interpolation: linearRGB;
+        shape-rendering: geometricPrecision;
+      }
+    @media (min-width: 84px) and (min-height: 84px) {
+       .pixart2svg {
+         shape-rendering: crispEdges;
+       }
+     }
+    @media (width: 42px) and (height: 42px) {
+       .pixart2svg {
+         shape-rendering: crispEdges;
+       }
+     }
+  </style>
+  <g class="pixart2svg">
+    <path stroke="#ecece7ff" d="M16 2h10M16 3h1M25 3h1M16 4h1M25 4h1M16 5h1M25 5h1M16 6h1M25 6h1M16 7h1M25 7h1M16 8h1M25 8h1M16 9h1M25 9h1M16 10h1M25 10h1M16 11h10M11 14h15M11 15h1M25 15h1M11 16h1M25 16h1M11 17h1M25 17h1M11 18h1M25 18h1M11 19h1M25 19h1M11 20h1M25 20h1M11 21h6M25 21h1M16 22h1M25 22h1M16 23h1M25 23h1M16 24h1M25 24h1M16 25h1M25 25h1M16 26h1M25 26h1M16 27h1M25 27h1M16 28h1M25 28h1M16 29h1M25 29h1M16 30h1M25 30h1M16 31h1M25 31h1M11 32h6M25 32h6M11 33h1M30 33h1M11 34h1M30 34h1M11 35h1M30 35h1M11 36h1M30 36h1M11 37h1M30 37h1M11 38h1M30 38h1M11 39h20"/>
+    <path stroke="#16161dff" d="M17 3h8M17 4h8M17 5h8M17 6h8M17 7h8M17 8h8M17 9h8M17 10h8M12 15h13M12 16h13M12 17h13M12 18h13M12 19h13M12 20h13M17 21h8M17 22h8M17 23h8M17 24h8M17 25h8M17 26h8M17 27h8M17 28h8M17 29h8M17 30h8M17 31h8M17 32h8M12 33h18M12 34h18M12 35h18M12 36h18M12 37h18M12 38h18"/>
+  </g>
+</svg>

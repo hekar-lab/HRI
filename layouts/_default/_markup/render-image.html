@@ -1,0 +1,18 @@
+{{ $url_parse := urls.Parse .Destination }}
+{{ $width := $url_parse.Query.Get "width" }}
+
+{{- if .IsBlock -}}
+  <figure>
+    <img loading="lazy" src="{{ .Destination | safeURL }}"
+      {{- with $width }}style="width: min(calc({{ . }}px * var(--img-scale)), var(--img-max-width))"{{ end -}}
+      {{- with .Text }} alt="{{ . }}"{{ end -}}
+    >
+    {{- with .Title }}<figcaption>{{ . }}</figcaption>{{ end -}}
+  </figure>
+{{- else -}}
+  <img loading="lazy" src="{{ .Destination | safeURL }}"
+    {{- with $width }}style="width: min(calc({{ . }}px * var(--img-scale)), var(--img-max-width))"{{ end -}}
+    {{- with .Text }} alt="{{ . }}"{{ end -}}
+    {{- with .Title }} title="{{ . }}"{{ end -}}
+  >
+{{- end -}}

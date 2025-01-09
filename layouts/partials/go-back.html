@@ -1,0 +1,16 @@
+<a href="{{ .Site.BaseURL }}" class="go-back clickable-div">
+    <div class="go-back-symbol">
+        <span class="icon-3 hri-icon"></span>
+    </div>
+    <div class="go-back-txt">
+        Entrance Hall
+    </div>
+    <div class="go-back-arrow">
+        {{- $dir := .Params.arrow -}}
+        {{- if strings.Contains $dir "n" }}{{ $dir = replace $dir "n" "s" -}}
+        {{- else if strings.Contains $dir "s" }}{{ $dir = replace $dir "s" "n" }}{{ end -}}
+        {{- if strings.Contains $dir "e" }}{{ $dir = replace $dir "e" "w" -}}
+        {{- else if strings.Contains $dir "w" }}{{ $dir = replace $dir "w" "e" }}{{ end -}}
+        <span class='icon-dir {{ $dir }}-icon'></span>
+    </div>
+</a>

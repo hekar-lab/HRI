@@ -1,0 +1,9 @@
+<figure>
+    <canvas class="pixeltex" {{ with .Get "lines" }}lines="{{ . }}"{{ end }}>
+        {{- .Inner | strings.TrimSpace -}}
+    </canvas>
+    {{ with .Get "caption" }}
+    <p class="fig-connector">&nbsp;│</p>
+    <figcaption class="text">{{ . }}</figcaption>
+    {{ end }}
+</figure>

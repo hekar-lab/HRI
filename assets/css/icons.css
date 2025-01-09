@@ -1,0 +1,76 @@
+span.icon, span.icon-3, span.icon-dir {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+span.icon {
+    width: var(--font-height);
+    height: var(--font-height);
+}
+
+span.icon-3 {
+    width: calc(3 * var(--font-height));
+    height: calc(3 * var(--font-height));
+}
+
+span.icon-dir {
+    width: calc(6 * var(--font-height));
+    height: calc(2 * var(--font-height));
+}
+
+/* Direction symbols */
+span.archives-icon {
+    background-image: url('/icons/misc/archives.svg');
+}
+
+span.bulletin-icon {
+    background-image: url('/icons/misc/bulletin.svg');
+}
+
+span.reception-icon {
+    background-image: url('/icons/misc/reception.svg');
+}
+
+span.onboarding-icon {
+    background-image: url('/icons/misc/onboarding.svg');
+}
+
+span.hri-icon {
+    background-image: url('/icons/favicons/HRI_icon.svg');
+}
+
+/* Direction arrow */
+span.dir-ne-icon {
+    background-image: url('/icons/arrows/dir_NE.svg');
+}
+
+span.dir-e-icon {
+    background-image: url('/icons/arrows/dir_E.svg');
+}
+
+span.dir-se-icon {
+    background-image: url('/icons/arrows/dir_SE.svg');
+}
+
+span.dir-sw-icon {
+    background-image: url('/icons/arrows/dir_SW.svg');
+}
+
+span.dir-w-icon {
+    background-image: url('/icons/arrows/dir_W.svg');
+}
+
+span.dir-nw-icon {
+    background-image: url('/icons/arrows/dir_NW.svg');
+}
+
+span.rotate-icon {
+    background-image: url('/icons/arrows/rotate.svg');
+}
+
+
+
+span.close-icon {
+    background-image: url('/icons/misc/close.svg');
+}

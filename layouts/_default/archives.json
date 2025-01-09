@@ -1,0 +1,6 @@
+{{- $.Scratch.Add "index" slice -}}
+{{- range .Pages.ByDate -}}
+    {{ $date := .Date | dateFormat "2006/01/02" }}
+    {{- $.Scratch.Add "index" (dict "id" .Params.id "title" .Title "author" .Params.author "date" $date "permalink" .Permalink) -}}
+{{- end -}}
+{{- $.Scratch.Get "index" | jsonify -}}

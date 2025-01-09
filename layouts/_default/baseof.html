@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language }}" dir='{{ .Language.LanguageDirection | default "auto" }}'>
+    <head>
+        {{- partial "head.html" . }}
+    </head>
+    <body>
+        {{- if or (eq .Type `bulletin`) (eq .Layout `reception`) (eq .Layout `onboarding`) }}
+        {{- partial "go-back" . }}
+        {{- end }}
+        {{- block "body" . }}{{ end }}
+    </body>
+</html>

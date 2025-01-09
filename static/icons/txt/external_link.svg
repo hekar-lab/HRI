@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg viewBox="0 0 14 14" width="14" height="14" xmlns="http://www.w3.org/2000/svg">
+  <style>
+      .pixart2svg {
+        color-interpolation: linearRGB;
+        shape-rendering: geometricPrecision;
+      }
+    @media (min-width: 28px) and (min-height: 28px) {
+       .pixart2svg {
+         shape-rendering: crispEdges;
+       }
+     }
+    @media (width: 14px) and (height: 14px) {
+       .pixart2svg {
+         shape-rendering: crispEdges;
+       }
+     }
+  </style>
+  <g class="pixart2svg">
+    <path stroke="#16161dff" d="M8 2h3M4 3h3M9 3h2M4 4h1M8 4h1M10 4h1M4 5h1M7 5h1M4 6h1M6 6h1M9 6h1M4 7h1M9 7h1M4 8h6"/>
+  </g>
+</svg>

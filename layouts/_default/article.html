@@ -1,0 +1,29 @@
+{{- define "body" }}
+
+{{- if .Content }}
+<main class="centered">
+    <a href="{{ .Parent.RelPermalink }}" class="close clickable-div">
+        <div class="close-symbol">
+            <span class="icon-3 close-icon"></span>
+        </div>
+        <div class="close-txt">
+            Close article
+        </div>
+    </a>
+    <article class="content archive">
+    {{- if .Title }}
+        <h1 value="{{ .Title }}" project="{{ .Params.id }}"></h1>
+    {{- end }}
+    {{- if or .Date .Params.author }}
+        <div class="credits">
+            {{ with .Params.author }}<div class="author">By: {{ . }}</div>{{ end }}
+            {{ with .Date }}<div class="date">{{ . | dateFormat "2006-01-02" }}</div>{{ end }}
+        </div>
+    {{- end }}
+
+    {{ .Content }}
+    </article>
+</main>
+{{- end }}
+
+{{- end }}

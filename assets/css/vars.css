@@ -1,0 +1,113 @@
+@font-face {
+    font-family: "Departure Mono";
+    src: url("/fonts/DepartureMono-Regular.woff2") format("woff2");
+}
+
+:root {
+    --base1: #ecece7;
+    --base2: #c9c9c7;
+    --base3: #a8a8a7;
+    --base4: #878789;
+    --base5: #68686c;
+    --base6: #4b4b50;
+    --base7: #2f2f36;
+    --base8: #16161d;
+
+    --red:     #9b2423;
+    --orange:  #d05d29;
+    --yellow:  #f9a900;
+    --green:   #237f52;
+    --cyan:    #086b71;
+    --blue:    #005387;
+    --violet:  #522aa2;
+    --magenta: #910775;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    font-family: Departure Mono, monospace;
+
+    --font-width: 7px;
+    font-size: 11px;
+
+    --char-per-line: 40;
+
+    --main-margin: 16px;
+    --main-min-width: 312px;
+
+    --img-scale: 1;
+    --img-max-width: 256px;
+}
+
+@media screen and (min-width: 400px) {
+    :root {
+        --char-per-line: 48;
+    }
+}
+
+@media screen and (min-width: 456px) {
+    :root {
+        --char-per-line: 56;
+    }
+}
+
+@media screen and (min-width: 512px) {
+    :root {
+        --char-per-line: 64;
+    }
+}
+
+@media screen and (min-width: 568px) {
+    :root {
+        --char-per-line: 48;
+        --img-scale: 2;
+        --img-max-width: 512px;
+        --font-width: 10.5px;
+        font-size: 16.5px;
+    }
+}
+
+@media screen and (min-width: 584px) {
+    :root {
+        --main-margin: 24px;
+    }
+}
+
+@media screen and (min-width: 668px) {
+    :root {
+        --char-per-line: 56;
+    }
+}
+
+@media screen and (min-width: 752px) {
+    :root {
+        --char-per-line: 64;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    :root {
+        --char-per-line: 48;
+        --main-margin: 32px;
+        --font-width: 14px;
+        font-size: 22px;
+    }
+}
+
+@media screen and (min-width: 880px) {
+    :root {
+        --img-scale: 3;
+        --img-max-width: 768px;
+        --char-per-line: 56;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    :root {
+        --char-per-line: 64;
+    }
+}
+
+:root {
+    --main-width: calc(var(--char-per-line) * var(--font-width)); 
+    --font-height: calc(2 * var(--font-width));
+}

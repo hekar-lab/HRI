@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg viewBox="0 0 42 42" width="42" height="42" xmlns="http://www.w3.org/2000/svg">
+  <style>
+      .pixart2svg {
+        color-interpolation: linearRGB;
+        shape-rendering: geometricPrecision;
+      }
+    @media (min-width: 84px) and (min-height: 84px) {
+       .pixart2svg {
+         shape-rendering: crispEdges;
+       }
+     }
+    @media (width: 42px) and (height: 42px) {
+       .pixart2svg {
+         shape-rendering: crispEdges;
+       }
+     }
+  </style>
+  <g class="pixart2svg">
+    <path stroke="#ecece7ff" d="M8 7h26M7 8h2M33 8h2M7 9h1M34 9h1M7 10h1M34 10h1M7 11h1M34 11h1M7 12h1M34 12h1M7 13h1M34 13h1M7 14h1M15 14h2M25 14h2M34 14h1M7 15h1M14 15h4M24 15h4M34 15h1M7 16h1M14 16h5M23 16h5M34 16h1M7 17h1M15 17h5M22 17h5M34 17h1M7 18h1M16 18h10M34 18h1M7 19h1M17 19h8M34 19h1M7 20h1M18 20h6M34 20h1M7 21h1M18 21h6M34 21h1M7 22h1M17 22h8M34 22h1M7 23h1M16 23h10M34 23h1M7 24h1M15 24h5M22 24h5M34 24h1M7 25h1M14 25h5M23 25h5M34 25h1M7 26h1M14 26h4M24 26h4M34 26h1M7 27h1M15 27h2M25 27h2M34 27h1M7 28h1M34 28h1M7 29h1M34 29h1M7 30h1M34 30h1M7 31h1M34 31h1M7 32h1M34 32h1M7 33h2M33 33h2M8 34h26"/>
+    <path stroke="#9b2423ff" d="M9 8h24M8 9h26M8 10h26M8 11h26M8 12h26M8 13h26M8 14h7M17 14h8M27 14h7M8 15h6M18 15h6M28 15h6M8 16h6M19 16h4M28 16h6M8 17h7M20 17h2M27 17h7M8 18h8M26 18h8M8 19h9M25 19h9M8 20h10M24 20h10M8 21h10M24 21h10M8 22h9M25 22h9M8 23h8M26 23h8M8 24h7M20 24h2M27 24h7M8 25h6M19 25h4M28 25h6M8 26h6M18 26h6M28 26h6M8 27h7M17 27h8M27 27h7M8 28h26M8 29h26M8 30h26M8 31h26M8 32h26M9 33h24"/>
+  </g>
+</svg>

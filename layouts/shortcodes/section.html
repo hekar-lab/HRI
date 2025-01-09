@@ -1,0 +1,8 @@
+{{ with $.Get "lvl"}}
+<h{{ . }} 
+{{ with $.Get "id"}}
+id="{{ . }}"
+{{ end }}><p class="section-title">
+    {{- with $.Get "title"}}{{ . }}{{ end -}}
+</p></h{{ . }}>
+{{ end }}

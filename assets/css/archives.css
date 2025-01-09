@@ -1,0 +1,222 @@
+header.search {
+    background: var(--base3);
+    height: calc(var(--font-height) * 3);
+
+    border-bottom: 2px solid var(--base8);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 5;
+}
+
+header.search input {
+    font-family: inherit;
+    font-size: inherit;
+    height: fit-content;
+    background: var(--base2);
+    border: 2px solid var(--base8);
+}
+
+main.archives {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#results {
+    list-style: none;
+    padding: 0px;
+    /* margin-top: 4rem; */
+    position: sticky;
+    width: var(--main-width);
+    top: max(calc(24 * var(--font-height)), calc(100vh - var(--font-height) * 14));
+    margin: 0px;
+}
+
+#archive-box-front, #archive-box-back {
+    position: fixed;
+
+    width: var(--main-width);
+    top: max(calc(24 * var(--font-height)), calc(100vh - var(--font-height) * 14));
+}
+
+.box-front-svg {
+    fill: var(--base3);
+    stroke: var(--base8);
+    stroke-width: 2px;
+    fill-rule: evenodd;
+
+    transform: translate(calc(var(--anim-width) * -18 / 30), 0px);
+}
+
+.box-back-svg {
+    fill: var(--base5);
+    stroke: var(--base8);
+    stroke-width: 2px;
+    fill-rule: evenodd;
+
+    transform: translate(calc(var(--anim-width) * -18 / 30), 0px);
+}
+
+#res-container {
+    margin-top: calc(var(--font-height) * 3);
+}
+
+:root {
+    --anim-width: max(min(calc(100vw - var(--main-width) - var(--main-margin) * 2), calc(8 * var(--font-width))), 8px);
+    --anim-height: calc(var(--font-height) * 4);
+}
+
+.entry {
+    width: calc(var(--main-width));
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: calc(var(--font-height) * 2) calc(var(--font-height) * 18);
+    position: absolute;
+    animation-name: pick-article;
+    animation-duration: 1s;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-play-state: paused;
+    animation-fill-mode: both;
+    z-index: 1;
+}
+
+.entry:hover > .article-archive {
+    border: 2px solid var(--base3);
+}
+
+.entry:hover .acid-svg polyline {
+    stroke: var(--base3);
+}
+
+.article-acid {
+    z-index: 2;
+}
+
+.article-acid-1 {
+    grid-column: 4;
+    grid-row: 1;
+}
+
+.article-acid-2 {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.article-acid-3 {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.article-acid-4 {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.acid-svg polyline {
+    fill: var(--base1);
+    stroke: var(--base8);
+}
+
+.acid-svg text {
+    fill: var(--base8);
+}
+
+.acid-svg line {
+    stroke: var(--base1);
+}
+
+.article-archive {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row: 2;
+
+    background: var(--base1);
+    border: 2px solid var(--base8);
+
+    display: grid;
+
+    padding: var(--font-height);
+}
+
+.article-desc {
+    display: flex;
+    flex-direction: column;
+    width: calc(32 * var(--font-width));
+    border: 1px solid var(--base8);
+
+    align-self: start;
+    justify-self: end;
+
+    grid-row: 1;
+}
+
+.desc-section {
+    color: var(--base6);
+}
+
+.desc-content {
+    padding: 0px var(--font-width);
+}
+
+.desc-sep {
+    margin: 0px var(--font-width);
+    border-top: 1px solid var(--base8);
+}
+
+.article-property-of {
+    align-self: end;
+    justify-self: start;
+
+    grid-row: 2;
+}
+
+@keyframes pick-article {
+    /* 32 frames anim => 1 frame = 3.125% */
+    /* Start */
+    0% {
+        transform: translate(calc(var(--anim-width) * -15 / 30), calc(21 * var(--font-height)));
+    }
+    /* File appear */
+    3.125% {
+        transform: translate(calc(var(--anim-width) * -15 / 30), 0px);
+    }
+    /* Before picking */
+    40.625% {
+        transform: translate(calc(var(--anim-width) * -3 / 30), calc(-1 * var(--anim-height) * 12 / 30));
+    }
+    /* Picking file */
+    43.75%, 50% {
+        /* fh = font height */
+        transform: translate(
+            calc(var(--anim-width) * 0 / 30), 
+            max(
+                /* centers picked file in the viewport */
+                /* (file is brought up to at least 24fh to avoid messing up the max function) */
+                min(calc(-1 * (50vh + 4.5 * var(--font-height))), calc(-24 * var(--font-height))),
+                /* Or keep the file at least 1fh from the search bar*/
+                calc(-100vh + min(14 * var(--font-height), 100vh - 24 * var(--font-height))  + 4 * var(--font-height))
+            )
+        );
+    }
+    /* Returning file */
+    53.125% {
+        transform: translate(calc(var(--anim-width) * 2 / 30), calc(-1 * var(--anim-height) * 16 / 30));
+    }
+    /* Before vanishing */
+    96.875% {
+        transform: translate(calc(var(--anim-width) * 15 / 30), calc(-1 * var(--anim-height)));
+    }
+    /* Vanishing file */
+    100% {
+        transform: translate(calc(var(--anim-width) * 15 / 30), calc(21 * var(--font-height)));
+    }
+}

@@ -1,0 +1,203 @@
+article {
+    background: var(--base1);
+    padding: var(--font-height) var(--main-margin);
+}
+
+article.archive {
+    padding: var(--font-height) var(--main-margin) calc(2 * var(--font-height)) var(--main-margin);
+}
+
+article.content {
+    border: 1px solid var(--base8);
+    box-shadow: 5px 5px var(--base5);
+}
+
+article a:hover {
+    border: 1px solid var(--base3);
+}
+
+article a:active {
+    background-color: var(--base3);
+}
+
+article > *  {
+    margin: var(--font-width) 0px;
+}
+
+.credits {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0px 0px var(--font-width) 0px;
+}
+
+.credits > .author {
+    grid-column: 1;
+    justify-self: left;
+}
+
+.credits > .date {
+    grid-column: 2;
+    justify-self: right;
+}
+
+h1 {
+    white-space:pre;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+}
+
+img::after {
+    /* TODO */
+    content: "Broken";
+}
+
+figure > img {
+    box-shadow: 3px 3px var(--base6);
+}
+
+figure > canvas, .highlight {
+    border-bottom: 2px dashed var(--base6);
+    border-top: 2px dashed var(--base6);
+}
+
+p.fig-connector {
+    margin: 0px;
+    color: var(--base6);
+}
+
+article {
+    counter-reset: section;
+}
+
+article.archive {
+    position: relative;
+}
+
+article.archive::after {
+    content: "█ Property of the HRI";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+article h2 {
+    counter-increment: section 1;
+    counter-reset: subsect figure;
+
+    display: flex;
+    flex-direction: row;
+}
+
+article h3 {
+    counter-increment: subsect 1;
+
+    display: flex;
+    flex-direction: row;
+}
+
+article figure {
+    counter-increment: figure 1;
+}
+
+article figure > figcaption {
+    display: flex;
+    flex-direction: row;
+}
+
+article h2::before {
+    content: "⟨" counter(section, upper-roman) "⟩\00a0";
+    text-wrap: nowrap;
+}
+
+article h3::before {
+    content: "⟨" counter(section, upper-roman) "." counter(subsect, lower-greek) "⟩\00a0";
+    text-wrap: nowrap;
+}
+
+article h4::before {
+    content: "├♩⟩\00a0";
+    text-wrap: nowrap;
+}
+
+article h5::before {
+    content: "├─♪⟩\00a0";
+    text-wrap: nowrap;
+}
+
+article h6::before {
+    content: "├──♬⟩\00a0";
+    text-wrap: nowrap;
+}
+
+article h4::after, article h5::after, article h6::after {
+    content: ":";
+}
+
+article figure > figcaption::before {
+    content: "\00a0└─► Fig " counter(section, upper-roman) "." counter(figure, lower-latin) ")\00a0";
+    text-wrap: nowrap;
+    color: var(--base6);
+}
+
+canvas.pixeltex {
+    width: var(--img-max-width);
+    image-rendering: pixelated;
+}
+
+.chroma {
+    overflow: scroll;
+}
+
+.highlight pre, .highlight code {
+    font-family: Departure Mono, monospace;
+}
+
+.wip {
+    width: 100%;
+    height: calc(3 * var(--font-height));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: repeating-linear-gradient( 225deg, var(--base4) 0 16px, transparent 16px 32px );
+    background-repeat: no-repeat;
+}
+
+.wip p {
+    background: var(--base1);
+    margin: 0;
+}
+
+a.close {
+    position: absolute;
+    right: calc(2 * var(--font-width));
+    top: var(--font-width);
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+
+    z-index: 9;
+}
+
+
+.close .close-symbol {
+    grid-column: 1;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.close .close-txt {
+    grid-column: 2;
+    padding: 0px calc(2 * var(--font-width)) 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

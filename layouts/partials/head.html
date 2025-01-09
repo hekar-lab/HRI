@@ -1,0 +1,81 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{{- if hugo.IsProduction | or (eq site.Params.env "production") | and (ne .Params.robotsNoIndex true) }}
+<meta name="robots" content="index, follow">
+{{- else }}
+<meta name="robots" content="noindex, nofollow">
+{{- end }}
+
+{{- /* Title */}}
+<title>{{ if .IsHome }}Welcome to the {{ else }}{{ if .Title }}{{ .Title }} @ {{ end }}{{ end }}{{ site.Title }}</title>
+
+{{- /* Favicons */}}
+<link rel="icon" href='{{ site.Params.assets.favicon | default "favicon.ico" | absURL }}'>
+<link rel="icon" type="image/png" sizes="16x16" href='{{ site.Params.assets.favicon16x16 | default "favicon-16x16.png" | absURL }}'>
+<link rel="icon" type="image/png" sizes="32x32" href='{{ site.Params.assets.favicon32x32 | default "favicon-32x32.png" | absURL }}'>
+
+<meta name="theme-color" content='#16161d'>
+
+{{- /* Common CSS */}}
+{{- $vars := resources.Get "css/vars.css" | fingerprint }}
+{{- $common := resources.Get "css/common.css" | fingerprint }}
+{{- $icons := resources.Get "css/icons.css" | fingerprint }}
+{{- $syntax := resources.Get "css/syntax.css" | fingerprint }}
+
+<link crossorigin="anonymous" href="{{ $vars.RelPermalink }}" integrity="{{ $vars.Data.Integrity }}" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="{{ $common.RelPermalink }}" integrity="{{ $common.Data.Integrity }}" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="{{ $icons.RelPermalink }}" integrity="{{ $icons.Data.Integrity }}" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="{{ $syntax.RelPermalink }}" integrity="{{ $syntax.Data.Integrity }}" rel="preload stylesheet" as="style">
+
+{{- /* Section specific assets */}}
+{{- /* Archives */}}
+{{- if and (eq .Type `archives`) (eq .Kind `section`) -}}
+{{- $archives_css := resources.Get "css/archives.css" | fingerprint }}
+<link crossorigin="anonymous" href="{{ $archives_css.RelPermalink }}" integrity="{{ $archives_css.Data.Integrity }}" rel="preload stylesheet" as="style">
+
+<link crossorigin="anonymous" rel="preload" as="fetch" href="index.json">
+{{ $search_bar_js := resources.Get "js/search_bar.js" | resources.Minify }}
+{{ $archives_js := resources.Get "js/archives.js" | resources.Minify }}
+{{- $search_js := (slice $search_bar_js $archives_js) | resources.Concat "assets/js/search.js" | fingerprint }}
+<script defer crossorigin="anonymous" src="{{ $search_js.RelPermalink }}" integrity="{{ $search_js.Data.Integrity }}"></script>
+{{- end -}}
+
+{{- /* Home */}}
+{{- if eq .Kind `home` -}}
+{{- $home_css := resources.Get "css/home.css" | fingerprint }}
+<link crossorigin="anonymous" href="{{ $home_css.RelPermalink }}" integrity="{{ $home_css.Data.Integrity }}" rel="preload stylesheet" as="style">
+
+{{ $home_js := resources.Get "js/home.js" | resources.Minify  | fingerprint }}
+<script defer crossorigin="anonymous" src="{{ $home_js.RelPermalink }}" integrity="{{ $home_js.Data.Integrity }}"></script>
+{{- end -}}
+
+{{- /* Bulletin */}}
+{{- if eq .Type `bulletin` -}}
+{{- $bulletin_css := resources.Get "css/bulletin.css" | fingerprint }}
+<link crossorigin="anonymous" href="{{ $bulletin_css.RelPermalink }}" integrity="{{ $bulletin_css.Data.Integrity }}" rel="preload stylesheet" as="style">
+{{- end -}}
+
+{{- /* Singles & Bulletin */}}
+{{- if or (eq .Kind `page`) (eq .Type `bulletin`)}}
+{{- $article_css := resources.Get "css/article.css" | fingerprint }}
+<link crossorigin="anonymous" href="{{ $article_css.RelPermalink }}" integrity="{{ $article_css.Data.Integrity }}" rel="preload stylesheet" as="style">
+
+{{ $single_js := resources.Get "js/single.js" | resources.Minify  | fingerprint }}
+<script defer crossorigin="anonymous" src="{{ $single_js.RelPermalink }}" integrity="{{ $single_js.Data.Integrity }}"></script>
+{{ $tex_js := resources.Get "js/pixeltex/pixeltex.js" | js.Build  | fingerprint }}
+<script defer crossorigin="anonymous" src="{{ $tex_js.RelPermalink }}" integrity="{{ $tex_js.Data.Integrity }}"></script>
+{{- end -}}
+
+{{- /* Reception */}}
+{{- if eq .Layout `reception` -}}
+{{- $reception_css := resources.Get "css/reception.css" | fingerprint }}
+<link crossorigin="anonymous" href="{{ $reception_css.RelPermalink }}" integrity="{{ $reception_css.Data.Integrity }}" rel="preload stylesheet" as="style">
+
+{{ $card_js := resources.Get "js/card.js" | resources.Minify  | fingerprint }}
+<script defer crossorigin="anonymous" src="{{ $card_js.RelPermalink }}" integrity="{{ $card_js.Data.Integrity }}"></script>
+{{ $phone_js := resources.Get "js/phone.js" | resources.Minify  | fingerprint }}
+<script defer crossorigin="anonymous" src="{{ $phone_js.RelPermalink }}" integrity="{{ $phone_js.Data.Integrity }}"></script>
+{{ $sun_js := resources.Get "js/sun_coords.js" | resources.Minify  | fingerprint }}
+<script defer crossorigin="anonymous" src="{{ $sun_js.RelPermalink }}" integrity="{{ $sun_js.Data.Integrity }}"></script>
+{{- end -}}

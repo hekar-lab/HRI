@@ -1,0 +1,38 @@
+{{- define "body" }}
+
+<main class="centered">
+    <div class="content">
+    <div class="logo">
+        <img src='{{ .Params.assets.logo | default "logo.png" | absURL }}'/>
+    </div>
+    <div class="line"></div>
+
+    <p>
+        Welcome to the HRI.<br/>
+        Refer to the signs to find your way around the facility.<br/>
+        If it's your first day here, direct yourself toward the Onboarding Room.
+    </p>
+
+    <nav>
+    <ul id="directions">
+    {{ range .Pages.ByWeight }}
+    <li class="sign">
+    <a href="{{ .RelPermalink }}" class="clickable-div">
+        <div class="sign-symbol">
+            <span class="icon-3 {{ .Params.icon }}-icon"></span>
+        </div>
+        <div class="sign-title">
+            {{ .LinkTitle }}
+        </div>
+        <div class="sign-arrow">
+            <span class="icon-dir {{ .Params.arrow }}-icon"></span>
+        </div>
+    </a>
+    </li>
+    {{ end }}
+    </ul>
+    </nav>
+    </div>
+</main>
+
+{{- end }}{{- /* end main */ -}}

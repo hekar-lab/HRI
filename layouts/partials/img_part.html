@@ -1,0 +1,23 @@
+{{ with .Get "src" | .Page.Resources.Get }}
+{{ $opts := dict "colors" (slice  "16161d" "2f2f36" "4b4b50" "68686c" "878789" "a8a8a7" "c9c9c7" "ecece7") }}
+{{/*  {{ $opts := dict "colors" (slice  "9b2423" "d05d29" "f9a900" "237f52" "086b71" "005387" "522aa2" "910775") }}  */}}
+{{/*  {{ $opts := dict "colors" (slice  "16161d" "2f2f36" "4b4b50" "68686c" "878789" "a8a8a7" "c9c9c7" "ecece7" "9b2423" "d05d29" "f9a900" "237f52" "086b71" "005387" "522aa2" "910775") }}  */}}
+{{ $opts := dict 
+  "method" "Atkinson"
+  "colors" (slice  "16161d" "ecece7" "9b2423" "d05d29" "f9a900" "237f52" "005387") 
+}}
+{{ $width :=  math.Min 256 .Width | int}}
+{{ $resize := fmt.Printf "resize %dx" $width}}
+{{ $filters := slice
+  (images.Process $resize)
+  (images.Dither $opts)
+  (images.Process "png")
+}}
+{{ with . | images.Filter $filters }}
+  <img 
+    src="{{ .RelPermalink }}" 
+    {{- with $width }}style="width: calc({{ . }}px * var(--img-scale))"{{ end -}}
+    {{- with $.Get "title" }}title="{{ . }}"{{ end -}}
+    {{- with $.Get "alt" }}alt="{{ . }}"{{ end -}}>
+{{ end }}
+{{ end }}
