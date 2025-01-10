@@ -8,7 +8,13 @@
 {{- end }}
 
 {{- /* Title */}}
-<title>{{ if .IsHome }}Welcome to the {{ else }}{{ if .Title }}{{ .Title }} @ {{ end }}{{ end }}{{ site.Title }}</title>
+<title>
+    {{- if .IsHome }}Welcome to the 
+    {{- else if .Params.id }} {{ .Params.id }} •
+    {{- else if .Title }}{{ .Title }} @ 
+    {{- end }}
+    {{- printf " %s" site.Title -}}
+</title>
 
 {{- /* Favicons */}}
 <link rel="icon" href='{{ site.Params.assets.favicon | default "favicon.ico" | absURL }}'>
