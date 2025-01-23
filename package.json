@@ -1,0 +1,36 @@
+{
+  "name": "hri",
+  "version": "1.0.0",
+  "description": "Cue the music",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "NODE_ENV=production node build.js",
+    "build": "HUGO_ENVIRONMENT=production hugo",
+    "start": "HUGO_ENVIRONMENT=production hugo server",
+    "predevbuild": "NODE_ENV=development node build.js",
+    "devbuild": "HUGO_ENVIRONMENT=development hugo",
+    "dev": "HUGO_ENVIRONMENT=development hugo server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hekar-lab/HRI.git"
+  },
+  "author": "HEKAR Research Institute",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hekar-lab/HRI/issues"
+  },
+  "homepage": "https://github.com/hekar-lab/HRI#readme",
+  "dependencies": {
+    "@react-three/drei": "^9.121.2",
+    "@react-three/fiber": "^8.17.12",
+    "d3": "^7.9.0",
+    "fft.js": "^4.0.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "three": "^0.172.0"
+  },
+  "devDependencies": {
+    "esbuild": "0.24.2"
+  }
+}

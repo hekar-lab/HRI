@@ -85,3 +85,17 @@
 {{ $sun_js := resources.Get "js/sun_coords.js" | resources.Minify  | fingerprint }}
 <script defer crossorigin="anonymous" src="{{ $sun_js.RelPermalink }}" integrity="{{ $sun_js.Data.Integrity }}"></script>
 {{- end -}}
+
+{{/*  JS Libs  */}}
+{{/*  Three.js  */}}
+{{/*  {{- if eq .Layout `article`}}
+<script type="importmap">
+    {
+        "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.172.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.172.0/examples/jsm/"
+        }
+    }
+</script>
+
+{{- end }}  */}}

@@ -1,6 +1,7 @@
 title: HRI
 baseURL: https://hekar.org/
 languageCode: en-us
+cleanDestinationDir: true
 
 params:
   assets:

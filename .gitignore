@@ -4,6 +4,9 @@
 /assets/jsconfig.json
 hugo_stats.json
 
+# ESBuild
+gen/
+
 # Executable may be added to repository
 hugo.exe
 hugo.darwin
@@ -12,4 +15,8 @@ hugo.linux
 # Temporary lock file while building
 /.hugo_build.lock
 
+# NPM
+/node_modules/
+
+# Misc.
 TODO

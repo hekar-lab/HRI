@@ -7,7 +7,9 @@ function createTitle(_evt) {
 
     let titles = document.getElementsByTagName("h1");
     for (let title of titles) {
-        titleText = title.getAttribute("value").trim();
+        titleText = title.getAttribute("value");
+        if (!titleText) { continue; }
+        titleText = titleText.trim();
         padding = (width - titleText.length - 2) / 2;
         paddedTitle =  " ".repeat(Math.floor(padding)) + titleText + " ".repeat(Math.ceil(padding));
         let txt = boxChars[2] + boxChars[0].repeat(width - 2) + boxChars[3] + "\n"

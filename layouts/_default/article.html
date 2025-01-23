@@ -11,6 +11,14 @@
         </div>
     </a>
     <article class="content archive">
+        <div id="notebook-root" style="display: none;"></div>
+    {{- $path := printf "notebooks/%s/main.jsx" .Params.id }}
+    {{- with resources.Get $path }}
+    {{- $opts := dict "minify" hugo.IsProduction }}
+    {{- $notebook_js := . | js.Build $opts | fingerprint }}
+        <script defer type="module" crossorigin="anonymous" src="{{ $notebook_js.RelPermalink }}" integrity="{{ $notebook_js.Data.Integrity }}"></script>
+    {{- end }}
+
     {{- if .Title }}
         <h1 value="{{ .Title }}" project="{{ .Params.id }}"></h1>
     {{- end }}

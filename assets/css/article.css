@@ -151,6 +151,11 @@ canvas.pixeltex {
     image-rendering: pixelated;
 }
 
+.labviz canvas, .lab-canvas-container {
+    width: var(--img-max-width) !important;
+    height: calc(var(--img-max-width) * 3 / 4) !important;
+}
+
 .chroma {
     overflow: scroll;
 }
@@ -200,4 +205,39 @@ a.close {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Notebook CSS */
+
+.spectrogram-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr calc(2 * var(--font-height));
+    grid-template-columns: calc(5 * var(--font-width)) 1fr;
+}
+
+.spectrogram-container svg {
+    width: 100%;
+    height: 100%;
+}
+
+.spectrogram-container text {
+    font-size: 1rem;
+    font-family: "Departure Mono";
+}
+
+.spectrogram-container .spectrogram-view {
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.spectrogram-container .spectrogram-x-axis {
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.spectrogram-container .spectrogram-y-axis {
+    grid-row: 1;
+    grid-column: 1;
 }
