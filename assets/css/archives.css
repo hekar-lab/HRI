@@ -32,11 +32,11 @@ main.archives {
 #results {
     list-style: none;
     padding: 0px;
-    /* margin-top: 4rem; */
-    position: sticky;
-    width: var(--main-width);
-    top: max(calc(24 * var(--font-height)), calc(100vh - var(--font-height) * 14));
+    position: relative;
     margin: 0px;
+    display: flex;
+    flex-direction: column;
+    row-gap: calc(8 * var(--font-height));
 }
 
 #archive-box-front, #archive-box-back {
@@ -44,6 +44,10 @@ main.archives {
 
     width: var(--main-width);
     top: max(calc(24 * var(--font-height)), calc(100vh - var(--font-height) * 14));
+}
+
+#archive-box-front {
+    z-index: 5;
 }
 
 .box-front-svg {
@@ -64,13 +68,25 @@ main.archives {
     transform: translate(calc(var(--anim-width) * -18 / 30), 0px);
 }
 
-#res-container {
-    margin-top: calc(var(--font-height) * 3);
-}
-
 :root {
     --anim-width: max(min(calc(100vw - var(--main-width) - var(--main-margin) * 2), calc(8 * var(--font-width))), 8px);
     --anim-height: calc(var(--font-height) * 4);
+}
+
+.batch {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--font-height);
+}
+
+#top-padding {
+    /* 23 <== 8 from gap + 20 from entry height - 5 from bottom sticky */
+    height: calc(100vh - 23 * var(--font-height));
+}
+
+#bottom-padding {
+    /* 30 <== 8 from gap + 3 from search bar + 18 from entry info height + 1 from transform */
+    height: calc(100vh - 30 * var(--font-height));
 }
 
 .entry {
@@ -78,14 +94,8 @@ main.archives {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: calc(var(--font-height) * 2) calc(var(--font-height) * 18);
-    position: absolute;
-    animation-name: pick-article;
-    animation-duration: 1s;
-    animation-direction: normal;
-    animation-timing-function: linear;
-    animation-iteration-count: 1;
-    animation-play-state: paused;
-    animation-fill-mode: both;
+    position: sticky;
+    bottom: calc(-5 * var(--font-height));
     z-index: 1;
 }
 
@@ -177,46 +187,4 @@ main.archives {
     justify-self: start;
 
     grid-row: 2;
-}
-
-@keyframes pick-article {
-    /* 32 frames anim => 1 frame = 3.125% */
-    /* Start */
-    0% {
-        transform: translate(calc(var(--anim-width) * -15 / 30), calc(21 * var(--font-height)));
-    }
-    /* File appear */
-    3.125% {
-        transform: translate(calc(var(--anim-width) * -15 / 30), 0px);
-    }
-    /* Before picking */
-    40.625% {
-        transform: translate(calc(var(--anim-width) * -3 / 30), calc(-1 * var(--anim-height) * 12 / 30));
-    }
-    /* Picking file */
-    43.75%, 50% {
-        /* fh = font height */
-        transform: translate(
-            calc(var(--anim-width) * 0 / 30), 
-            max(
-                /* centers picked file in the viewport */
-                /* (file is brought up to at least 24fh to avoid messing up the max function) */
-                min(calc(-1 * (50vh + 4.5 * var(--font-height))), calc(-24 * var(--font-height))),
-                /* Or keep the file at least 1fh from the search bar*/
-                calc(-100vh + min(14 * var(--font-height), 100vh - 24 * var(--font-height))  + 4 * var(--font-height))
-            )
-        );
-    }
-    /* Returning file */
-    53.125% {
-        transform: translate(calc(var(--anim-width) * 2 / 30), calc(-1 * var(--anim-height) * 16 / 30));
-    }
-    /* Before vanishing */
-    96.875% {
-        transform: translate(calc(var(--anim-width) * 15 / 30), calc(-1 * var(--anim-height)));
-    }
-    /* Vanishing file */
-    100% {
-        transform: translate(calc(var(--anim-width) * 15 / 30), calc(21 * var(--font-height)));
-    }
 }

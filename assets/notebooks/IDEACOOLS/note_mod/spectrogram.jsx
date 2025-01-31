@@ -256,6 +256,7 @@ function Axis({scale, orientation}, svgRef) {
         if (scale) {
             if (orientation == 'x') {
                 svg.select('.axis')
+                    .attr('transform', `translate(-1, 0)`)
                     .call(d3.axisBottom(scale));
             } else if (orientation == 'y') {
                 svg.select('.axis')
