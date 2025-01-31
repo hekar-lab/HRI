@@ -115,9 +115,6 @@ function Spectre({data}) {
         const tX = d3.zoomTransform(d3.select(xAxisRef.current).node());
         const tY = d3.zoomTransform(d3.select(yAxisRef.current).node());
 
-        console.log(tX);
-        console.log(tY);
-
         setXDomain(xScale.current.range().map(tX.invertX, tX).map(xScale.current.invert));
         setXAxis(() => tX.rescaleX(xScale.current));
 
