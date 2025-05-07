@@ -100,3 +100,54 @@ a.go-back {
     justify-content: start;
     align-items: center;
 }
+
+.txt-sign {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: calc(var(--font-width) * 3) 1fr var(--font-width);
+
+    padding-top: var(--font-width);
+    padding-bottom: var(--font-width);
+}
+
+.txt-sign .txt-sign-content {
+    grid-column: 2;
+}
+
+.txt-sign::before {
+    content: "";
+
+    grid-column: 1;
+    align-self: center;
+    justify-self: center;
+
+    background-size: cover;
+    display: inline-block;
+    width: var(--font-height);
+    height: var(--font-height);
+}
+
+.txt-sign.info {
+    border: 2px solid var(--blue);
+}
+
+.txt-sign.info::before {
+    background-image:  url('/icons/txt/info.svg');
+}
+
+.txt-sign.warn {
+    border: 2px solid var(--yellow);
+}
+
+.txt-sign.warn::before {
+    background-image:  url('/icons/txt/warning.svg');
+}
+
+.txt-sign.danger {
+    border: 2px solid var(--red);
+}
+
+.txt-sign.danger::before {
+    background-image:  url('/icons/txt/prohibited.svg');
+}

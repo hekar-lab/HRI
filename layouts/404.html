@@ -1,7 +1,40 @@
-{{- define "body" }}
-<div class="not-found">
-    <div class="four-o-four"/>
-    <p>This is outside. There's not much here but you can hang out for as long as you wish.</p>
-    {{/*  add return llink  */}}
-</div>
-{{- end }}{{/* end main */ -}}
+<!DOCTYPE html>
+<html lang="{{ site.Language }}" dir='{{ .Language.LanguageDirection | default "auto" }}'>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="robots" content="noindex, nofollow">
+
+        <title>Neither here nor there</title>
+
+        <link rel="icon" href='{{ site.Params.assets.favicon | default "favicon.ico" | absURL }}'>
+        <link rel="icon" type="image/png" sizes="16x16" href='{{ site.Params.assets.favicon16x16 | default "favicon-16x16.png" | absURL }}'>
+        <link rel="icon" type="image/png" sizes="32x32" href='{{ site.Params.assets.favicon32x32 | default "favicon-32x32.png" | absURL }}'>
+
+        <meta name="theme-color" content='#16161d'>
+
+        {{- $vars := resources.Get "css/vars.css" | fingerprint }}
+        {{- $common := resources.Get "css/common.css" | fingerprint }}
+        {{- $icons := resources.Get "css/icons.css" | fingerprint }}
+        {{- $article_css := resources.Get "css/article.css" | fingerprint }}
+
+        <link crossorigin="anonymous" href="{{ $vars.RelPermalink }}" integrity="{{ $vars.Data.Integrity }}" rel="preload stylesheet" as="style">
+        <link crossorigin="anonymous" href="{{ $common.RelPermalink }}" integrity="{{ $common.Data.Integrity }}" rel="preload stylesheet" as="style">
+        <link crossorigin="anonymous" href="{{ $icons.RelPermalink }}" integrity="{{ $icons.Data.Integrity }}" rel="preload stylesheet" as="style">
+        <link crossorigin="anonymous" href="{{ $article_css.RelPermalink }}" integrity="{{ $article_css.Data.Integrity }}" rel="preload stylesheet" as="style">
+
+        {{ $single_js := resources.Get "js/single.js" | resources.Minify  | fingerprint }}
+        
+        <script defer crossorigin="anonymous" src="{{ $single_js.RelPermalink }}" integrity="{{ $single_js.Data.Integrity }}"></script>
+    </head>
+    <body>
+        <main class="centered">
+            <article class="content">
+            <h1 value="Too high, too far, too soon"></h1>
+            <p>This is outside. There's not much here but you can hang out for as long as you wish.</p>
+            <p>When you feel like it you can go <a href="{{ .Site.Home.RelPermalink }}">back to the lobby</a></p>
+            </article>
+        </main>
+    </body>
+</html>

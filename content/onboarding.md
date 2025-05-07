@@ -6,16 +6,61 @@ arrow: dir-w
 layout: onboarding
 ---
 
+Welcome to the greatest research facility under the Sun!  
+This is a quick guide on everything you need to know about our organisation and
+its operations.
+
+## What is the HEKAR Research Institute
+
+The HEKAR Research Institute, or H.R.I., is an organisation mainly dedicated to research
+in computer science applied to music. Though fields where computer science meet the
+creative side of the human mind are always welcomed.
+
+### Our goals
+
+At the H.R.I., we believe that art is central to the human experience. Art 
+
+### Our teams
+
+
+
+#### The Administration
+
+#### The DSP Department
+
+#### The Plugin Laboratory
+
+#### The F.A.F.O. Unit
+
+## Navigate the facility
+
+### Reception Desk
+
+### Bulletin Board
+
+### Archives
+
+## Safety guidelines
+
 {{< wip >}}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis gravida arcu. Maecenas egestas diam tellus. Quisque gravida efficitur ante. Duis interdum, leo ut efficitur fermentum, neque tellus commodo augue, sed semper ex turpis id leo. In quis pellentesque libero. Cras egestas fermentum dolor, in dapibus nunc rhoncus quis. Praesent cursus massa a neque venenatis efficitur. Nam scelerisque nulla non velit scelerisque, a venenatis eros malesuada. Sed aliquam iaculis fermentum. Pellentesque fermentum, tellus at pulvinar tempor, nunc turpis euismod leo, ut placerat massa tortor quis purus. Suspendisse nec arcu rhoncus, dapibus odio eget, dignissim diam. Aliquam in rutrum augue. Nullam sit amet ex et quam rutrum tincidunt sit amet a mauris. Donec vitae sapien sed nibh viverra tincidunt. Duis suscipit luctus iaculis.
+{{< sign warn >}}
+The safety committee is hard at work creating the perfect guidelines.  
+In the mean time, restrain from doing anything that could go against the future
+safety guidelines.
 
-Praesent accumsan sapien nec libero commodo, vitae hendrerit magna commodo. Nam feugiat viverra pulvinar. Curabitur hendrerit libero metus. Fusce bibendum elementum pulvinar. Curabitur vitae faucibus lectus. Mauris porta eu neque vitae efficitur. Aliquam consequat massa porta metus sagittis, tincidunt faucibus augue posuere.
+Any violation of said guidelines will be sanctioned to the fullest extent.
+{{< /sign >}}
 
-Aenean non odio tincidunt, mattis justo sed, consequat mauris. Pellentesque semper mauris non risus ultrices consequat. Vestibulum varius, mauris nec bibendum accumsan, neque ante ullamcorper quam, at pharetra ante metus at turpis. Cras maximus magna a eros pretium, quis semper nibh lobortis. Fusce tincidunt aliquam pellentesque. Aliquam bibendum felis risus, non laoreet justo venenatis id. Aenean aliquet, mauris sed venenatis porttitor, tellus risus tincidunt elit, eget porta nunc sapien non ligula.
+## Frequently Asked Questions
 
-Nullam at condimentum nulla, id hendrerit neque. Vivamus id mattis dolor. Aliquam tempor pulvinar nisl, non pulvinar orci elementum et. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus laoreet ipsum at blandit ornare. Fusce eu faucibus dolor, vel consectetur justo. Suspendisse potenti. Nam rhoncus diam in augue posuere volutpat. In vel eros est. In nec ullamcorper elit, sit amet luctus leo.
+### What does HEKAR stand for?
 
-Duis ullamcorper tellus lectus, vitae congue eros accumsan sit amet. Nam sollicitudin, urna at gravida pretium, neque odio sollicitudin dui, sit amet feugiat elit leo lacinia sapien. Nulla a tempus risus, a suscipit lacus. Donec tincidunt leo orci, a ullamcorper mauris laoreet sed. Ut ornare nisl aliquet dui interdum, malesuada commodo metus imperdiet. Ut quis lacus a eros volutpat facilisis a ut sem. Proin tellus est, luctus a urna quis, iaculis ullamcorper turpis. Phasellus eget consequat magna, ac volutpat tellus. Vestibulum sagittis dolor ac lobortis laoreet. 
+### How did I end up here?
 
-{{< wip >}}
+### Can you give me back my $20?
+
+No, Dylan. We cannot. Those 20 bucks are essential in the running of our daily
+operations. Do not fret, they'll be put to good use.
+
+### How can I join the H.R.I.?

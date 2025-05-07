@@ -1,8 +1,0 @@
-<div 
-    id='lab-{{ .Get "id" }}' 
-    class="lab-widget"
-></div>
-
-{{ $opts := dict "target" "es2015" "minify" hugo.IsProduction }}
-{{ $lab_js := .Get "id" | printf "js/%s.jsx" | .Page.Resources.Get | js.Build $opts | fingerprint }}
-<script defer crossorigin="anonymous" type="module" src="{{ $lab_js.RelPermalink }}" integrity="{{ $lab_js.Data.Integrity }}"></script>

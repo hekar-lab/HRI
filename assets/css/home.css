@@ -17,6 +17,7 @@
     padding: 0px;
     width: fit-content;
     margin: 0px;
+    margin-top: var(--font-height);
 }
 
 #directions .sign {

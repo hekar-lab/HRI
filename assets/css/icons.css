@@ -19,6 +19,7 @@ span.icon-dir {
     height: calc(2 * var(--font-height));
 }
 
+
 /* Direction symbols */
 span.archives-icon {
     background-image: url('/icons/misc/archives.svg');
@@ -39,6 +40,7 @@ span.onboarding-icon {
 span.hri-icon {
     background-image: url('/icons/favicons/HRI_icon.svg');
 }
+
 
 /* Direction arrow */
 span.dir-ne-icon {
@@ -69,8 +71,28 @@ span.rotate-icon {
     background-image: url('/icons/arrows/rotate.svg');
 }
 
-
-
 span.close-icon {
     background-image: url('/icons/misc/close.svg');
+}
+
+
+/* Text icon */
+span.copy {
+    background-image: url('/icons/txt/copy.svg');
+}
+
+span.prohibited {
+    background-image: url('/icons/txt/prohibited.svg');
+}
+
+span.warning {
+    background-image: url('/icons/txt/warning.svg');
+}
+
+span.info {
+    background-image: url('/icons/txt/info.svg');
+}
+
+span.ext-link {
+    background-image: url('/icons/txt/extrenal_link.svg');
 }

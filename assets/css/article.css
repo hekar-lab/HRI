@@ -12,6 +12,10 @@ article.content {
     box-shadow: 5px 5px var(--base5);
 }
 
+article a {
+    border-bottom: 2px dashed var(--base3);
+}
+
 article a:hover {
     border: 1px solid var(--base3);
 }
@@ -38,6 +42,16 @@ article > *  {
 .credits > .date {
     grid-column: 2;
     justify-self: right;
+}
+
+blockquote {
+    border-left: 4px solid var(--base6);
+    padding: var(--font-height);
+    margin: var(--font-width) 0px var(--font-width) 0px;
+}
+
+blockquote > * {
+    margin: 0px;
 }
 
 h1 {
@@ -151,7 +165,7 @@ canvas.pixeltex {
     image-rendering: pixelated;
 }
 
-.labviz canvas, .lab-canvas-container {
+.lab-canvas-container {
     width: var(--img-max-width) !important;
     height: calc(var(--img-max-width) * 3 / 4) !important;
 }
@@ -180,6 +194,7 @@ canvas.pixeltex {
     margin: 0;
 }
 
+
 a.close {
     position: absolute;
     right: calc(2 * var(--font-width));
@@ -206,6 +221,7 @@ a.close {
     justify-content: center;
     align-items: center;
 }
+
 
 /* Notebook CSS */
 
