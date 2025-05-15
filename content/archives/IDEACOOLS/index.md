@@ -1,6 +1,6 @@
 ---
 id: 'IDEACOOLS'
-title: The Torment Nexus
+title: That's how you react
 date: '2025-01-10T12:30:42'
 author: REDACTED
 layout: article

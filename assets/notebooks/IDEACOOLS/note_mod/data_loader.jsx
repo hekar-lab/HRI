@@ -104,7 +104,7 @@ function FileUploader({aux, setData, rawFiles, fileId, fileList, setFileList}) {
     return (
         <>
         <input id="file-upload" type="file" accept="audio/*" style={{display: "none"}} onChange={handleChange}/>
-        <label htmlFor="file-upload" className="upload">Hello</label>
+        <label htmlFor="file-upload" className="upload">WIP :p</label>
         </>
     )
 }
