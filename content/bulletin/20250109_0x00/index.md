@@ -3,7 +3,7 @@ date: 2025-01-09T07:05:00
 title: Phone line is broken
 pin_color: red
 signature: Sorry for the inconvinience
-author: HRI Team
+author: HRI Repair Team
 ---
 
 Due to the {{< redacted 7 >}} incident our phone line has been destablised. Our

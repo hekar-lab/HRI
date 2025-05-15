@@ -62,6 +62,19 @@ h1, h2, h3, h4, h5, h6 {
     font-size: inherit;
 }
 
+ul, li {
+    margin: 0px;
+}
+
+ul {
+    list-style: none;
+    padding-left: calc(3 * var(--font-width));
+}
+
+li::marker {
+    content: "▷ ";
+}
+
 figure {
     display: flex;
     flex-direction: column;

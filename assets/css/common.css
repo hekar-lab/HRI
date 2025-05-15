@@ -14,10 +14,6 @@ a, ul, li {
     color: inherit;
 }
 
-ul {
-    list-style-type: square;
-}
-
 a {
     outline: none;
     text-decoration: none;

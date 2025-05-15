@@ -3,6 +3,11 @@
     src: url("/fonts/DepartureMono-Regular.woff2") format("woff2");
 }
 
+@font-face {
+    font-family: "Mintsoda";
+    src: url("/fonts/MintsodaLimeGreen.ttf") format("truetype");
+}
+
 :root {
     --base1: #ecece7;
     --base2: #c9c9c7;
@@ -24,7 +29,7 @@
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
-    font-family: Departure Mono, monospace;
+    font-family: Departure Mono, Mintsoda, monospace;
 
     --font-width: 7px;
     font-size: 11px;

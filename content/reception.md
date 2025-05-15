@@ -21,5 +21,5 @@ assets:
 ### █ Off-site locations
 
 - [HRI Laboratory](https://github.com/hekar-lab)
-- [HRI Logorrhea Committee](https://bsky.app/profile/hekar.bsky.social)
+- [HRI Logorrhea Committee](https://bsky.app/profile/hekar.org)
 
