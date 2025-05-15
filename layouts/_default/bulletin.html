@@ -2,7 +2,7 @@
 
 <main class="centered">
     <div class="board">
-    {{- range .Pages.ByDate }}
+    {{- range .Pages.ByDate.Reverse }}
         <div class="bulletin {{.Params.pin_color}}">
         {{ with .Date }}<div class="date">{{ . | dateFormat "Monday, 2 January, 2006" }}</div>{{ end }}
         {{- if .Title }}

@@ -3,6 +3,7 @@ title: Reception Desk
 icon: reception
 arrow: dir-sw
 layout: reception
+weight: 8
 
 
 assets:

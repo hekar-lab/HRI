@@ -1,5 +1,5 @@
 {{- $.Scratch.Add "index" slice -}}
-{{- range .Pages.ByDate -}}
+{{- range .Pages.ByDate.Reverse -}}
     {{ $date := .Date | dateFormat "2006/01/02" }}
     {{- $.Scratch.Add "index" (dict "id" .Params.id "title" .Title "author" .Params.author "date" $date "permalink" .Permalink) -}}
 {{- end -}}

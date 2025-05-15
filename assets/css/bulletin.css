@@ -64,3 +64,15 @@ div.bulletin.magenta::before {
     display: flex;
     justify-content: right;
 }
+
+.bulletin a {
+    border-bottom: 2px dashed var(--base3);
+}
+
+.bulletin a:hover {
+    border: 1px solid var(--base3);
+}
+
+.bulletin a:active {
+    background-color: var(--base3);
+}

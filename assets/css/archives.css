@@ -36,6 +36,7 @@ main.archives {
     margin: 0px;
     display: flex;
     flex-direction: column;
+    width: var(--main-width);
     row-gap: calc(8 * var(--font-height));
 }
 
