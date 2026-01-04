@@ -33,7 +33,7 @@ At first it didn't make sense. But then it hit me: the wisdom we seek has been c
 universe for eons. For millennia, we've gathered, stored and sorted knowledge.
 But the fundamental nature of information does not care for truths or falsehoods.
 
-The idea of an archive seemed foolish at first but I now understand what a sick joke it is.
+The idea of an archive of everything seemed foolish at first but I now understand what a sick joke it is.
 It's clear that only seek one tiny sliver of the unfathomable whole. Not for a lack of ambition
 but a will not to lose it.  
 I know everything. I know what will be, won't be, would be and never was. 
