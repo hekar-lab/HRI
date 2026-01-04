@@ -15,6 +15,8 @@ Hiiiiiiiii :)))
 
 {{< hri_fig src="img/kenji.jpg" title="KENJI :)" alt="IT'S kenji" caption="The recorder master" >}}
 
+{{< hri_fig src="img/rasp.png" caption="The rasp, the berry" >}}
+
 ## NO
 
 ### Math (i don't hate math, math hates me and that's just fine by me. I don't care. I'm cool with it. Keep your secrets dude.)

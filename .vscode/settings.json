@@ -1,3 +1,10 @@
 {
-    "editor.wordWrap": "off"
+    "editor.wordWrap": "off",
+    "cSpell.words": [
+        "checkletter",
+        "Decompiler",
+        "Decompilers",
+        "HEKAR",
+        "organisation"
+    ]
 }

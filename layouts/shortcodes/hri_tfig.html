@@ -1,0 +1,9 @@
+<figure>
+    <pre><code>
+        {{- .Inner | strings.TrimPrefix "\n" | strings.TrimSuffix "\n" -}}
+    </code></pre>
+    {{- with .Get "caption" }}
+    <p class="fig-connector">&nbsp;│</p>
+    <figcaption class="text">{{ . }}</figcaption>
+    {{- end }}
+</figure>

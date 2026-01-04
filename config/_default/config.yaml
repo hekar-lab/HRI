@@ -26,6 +26,10 @@ markup:
   goldmark:
     parser:
       wrapStandAloneImageWithinParagraph: false
+    extensions:
+      footnote:
+        enable: true    
+        backlinkHTML: "↲"
   highlight:
     anchorLineNos: false
     codeFences: true

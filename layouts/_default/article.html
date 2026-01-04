@@ -20,7 +20,7 @@
     {{- end }}
 
     {{- if .Title }}
-        <h1 value="{{ .Title }}" project="{{ .Params.id }}"></h1>
+        <h1 value="{{ .Title }}" subtitle="{{ .Params.subtitle }}" project="{{ .Params.id }}"></h1>
     {{- end }}
     {{- if or .Date .Params.author }}
         <div class="credits">

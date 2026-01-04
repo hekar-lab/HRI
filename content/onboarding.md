@@ -8,7 +8,7 @@ weight: 6
 ---
 
 Welcome to the greatest research facility under the Sun!  
-This is a quick guide on everything you need to know about our organisation and
+This is a quick guide on everything you need to know about our organization and
 its operations.
 
 ## What is the HEKAR Research Institute
@@ -21,8 +21,8 @@ the creative and artistic side of the human mind we strive to study it.
 
 Art is everywhere.  
 It's the core tenet of the H.R.I. As long as one tries to explore
-and experiment with any medium we believe that it is Art. And as we are huge
-nerds it goes without saying that we went for the nerdiest medium.
+and experiment with any medium we believe that it is Art. And, as we are huge
+nerds, it goes without saying that we went for the nerdiest medium.
 
 Computers and Art have a long history together. And, arguably, in more ways than
 one, are the perfect fit. Yet, the balance of this union seems very fickle.
@@ -32,7 +32,7 @@ a partnership.
 
 For this reason, the H.R.I. aims to bring back some harmony to this balance.
 Everything is Art. And as such if we wish to elevate our craft we should seek
-colaboration in these times of conflict. Colaboration our message to the World.
+collaboration in these times of conflict. Collaboration our message to the World.
 
 Admittedly, this is far greater than this organization. We are but a small piece
 of this puzzle. Still, we hope that our research in this tiny yet nigh infinite
@@ -40,7 +40,7 @@ field of Software Art will make a difference.
 
 ### Our teams
 
-To accomplish such a task, we have recruted the best minds of our time and have
+To accomplish such a task, we have recruited the best minds of our time and have
 split them into team with more focused objectives.
 
 #### The Administration
@@ -48,7 +48,7 @@ split them into team with more focused objectives.
 It's a bit nebulous what the Administration is doing. But the facility is running
 smoothly and it would not be the case without them. Or so the Administration claims.
 
-#### Theorical Department
+#### Theoretical Department
 
 We're not sure they exists. But if they do, it would be a team dedicated to
 furthering our mission through means that would ideally have as few ties to our
@@ -66,7 +66,7 @@ hard to know who's really in charge.
 
 This is the spirit of the H.R.I. This team has no purpose and yet gives sense to
 our entire endeavour. The best way to understand them is to join them. The feeling
-of being part of such an idiosyncratic group is unparalled. If one world could describe
+of being part of such an idiosyncratic group is unparalleled. If one world could describe
 it would most certainly be: {{< redacted 12 >}}
 
 ## Navigate the facility
