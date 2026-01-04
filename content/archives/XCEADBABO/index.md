@@ -13,7 +13,7 @@ the infinite [archive of Babel](https://libraryofbabel.info)
 when Dr. {{< redacted 8 >}} asked for a file urgently. It had been months since
 I'd done any kind of sorting and the Administration was getting wise to my antics.
 This should have been the end of my career. But, luckily, I remembered a trick a friend of mine
-told me about:
+once told me about:
 
 > "When you have an infinite amount of tasks to do in a finite time frame,
 > simply do the first one in half of the allotted period, then the second one
@@ -34,7 +34,7 @@ universe for eons. For millennia, we've gathered, stored and sorted knowledge.
 But the fundamental nature of information does not care for truths or falsehoods.
 
 The idea of an archive of everything seemed foolish at first but I now understand what a sick joke it is.
-It's clear that only seek one tiny sliver of the unfathomable whole. Not for a lack of ambition
+It's clear that we only seek one tiny sliver of the unfathomable whole. Not for a lack of ambition
 but a will not to lose it.  
 I know everything. I know what will be, won't be, would be and never was. 
 And yet through all of this wisdom it's as if I know nothing.
