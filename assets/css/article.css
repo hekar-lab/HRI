@@ -44,14 +44,37 @@ article > *  {
     justify-self: right;
 }
 
+article p > em {
+    color: var(--blue);
+}
+
+article p > strong {
+    color: var(--yellow);
+}
+
+article p > em > strong {
+    color: var(--red);
+}
+
 blockquote {
     border-left: 4px solid var(--base6);
-    padding: var(--font-height);
+    padding: 0px;
+    padding-left: calc(var(--font-width) * 2);
     margin: var(--font-width) 0px var(--font-width) 0px;
 }
 
 blockquote > * {
     margin: 0px;
+}
+
+figure > pre {
+    font: inherit;
+    margin: 0;
+    margin-left: var(--font-width);
+}
+
+code {
+    font: inherit;
 }
 
 h1 {
@@ -71,7 +94,7 @@ ul {
     padding-left: calc(3 * var(--font-width));
 }
 
-li::marker {
+ul > li::marker {
     content: "▷ ";
 }
 
@@ -171,6 +194,11 @@ article figure > figcaption::before {
     content: "\00a0└─► Fig " counter(section, upper-roman) "." counter(figure, lower-latin) ")\00a0";
     text-wrap: nowrap;
     color: var(--base6);
+}
+
+article sup {
+    font-size: inherit; 
+    vertical-align: inherit;
 }
 
 canvas.pixeltex {

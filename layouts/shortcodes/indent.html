@@ -1,0 +1,3 @@
+{{ $rep := .Get 0 | int }}
+{{- $indent := strings.Repeat $rep "\u00A0" }}
+{{- printf "%s" $indent }}

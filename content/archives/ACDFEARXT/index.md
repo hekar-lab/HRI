@@ -8,7 +8,7 @@ layout: article
 
 The Archives are the very essence of the H.R.I. They are embodiment of our hard labor.  
 It goes without such an important part or our organization deserves only the best
-treatement. As such we've use a brand new technology to implement our Archive Search
+treatment. As such we've use a brand new technology to implement our Archive Search
 System (or ASS) named ACId. ACId, or Article Comprehensive Id, is the modern way to
 categories, class and search articles.  
 Such a perfect and complete system is of course a bit difficult to get used to at
@@ -26,12 +26,12 @@ that can be split into 5 groups. The groups are as follows:
 
 The 1st letter is the team ID. For example, for this article the first letter of
 the ACId is "A" which is the ID of the Administration team.  
-As of writting there are 5 team IDs:
+As of writing there are 5 team IDs:
 
 - A: The Administration
 - H: Hazard Unit
 - S: Silicon Laboratory
-- T: Theorical Department
+- T: Theoretical Department
 - X: Unknown/Any
 
 ### Year and Day
