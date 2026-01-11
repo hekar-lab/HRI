@@ -9,17 +9,23 @@ draft: true
 
 Hiiiiiiiii :)))
 
+**hello**
+
 ## Images
 
-{{< hri_fig src="img/GASTON.gif" caption="The sleeper" >}}
+{{% fig src="img/GASTON.gif" caption="The sleeper[^sus]" id="gaston" %}}
 
-{{< hri_fig src="img/kenji.jpg" title="KENJI :)" alt="IT'S kenji" caption="The recorder master" >}}
+[^sus]: Is he working?
 
-{{< hri_fig src="img/rasp.png" caption="The rasp, the berry" >}}
+{{% fig src="img/kenji.jpg" title="KENJI :)" alt="IT'S kenji" caption="The recorder master" id="kenji" %}}
+
+{{% fig src="img/rasp.png" caption="The rasp, the berry" id="raspberry" %}}
 
 ## NO
 
 ### Math (i don't hate math, math hates me and that's just fine by me. I don't care. I'm cool with it. Keep your secrets dude.)
+
+Good enough {{< figref gaston >}}
 
 #### YEAH :D
 

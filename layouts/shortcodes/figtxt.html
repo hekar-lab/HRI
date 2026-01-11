@@ -1,0 +1,22 @@
+{{ if not (.Page.Store.Get "figCounter") }}
+    {{- .Page.Store.Set "figCounter" 0 }}
+{{- end }}
+
+{{- .Page.Store.Add "figCounter" 1 }}
+
+{{- if not (.Page.Store.Get (.Get "id"))}}
+    {{- .Page.Store.Set (.Get "id") (.Page.Store.Get "figCounter") }}
+{{- end -}}
+
+<figure {{- with .Get "class" }} class="{{ . }}" {{- end }} id="{{ .Get "id" }}">
+<pre><code>
+{{- .Inner | strings.TrimPrefix "\n" | strings.TrimSuffix "\n" -}}
+</code></pre>
+{{ if .Get "caption" }}
+<p class="fig-connector">&nbsp;&nbsp;│</p>
+<figcaption class="text">Fig.&nbsp;{{ .Page.Store.Get (.Get "id") }}:&nbsp;
+
+{{ .Get "caption" -}}
+</figcaption>
+{{- end -}}
+</figure>

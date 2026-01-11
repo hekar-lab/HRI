@@ -70,7 +70,8 @@ div.bulletin.magenta::before {
 }
 
 .bulletin a:hover {
-    border: 1px solid var(--base3);
+    background: var(--base2);
+    border: 0px;
 }
 
 .bulletin a:active {

@@ -17,7 +17,8 @@ article a {
 }
 
 article a:hover {
-    border: 1px solid var(--base3);
+    background: var(--base2);
+    border: 0px;
 }
 
 article a:active {
@@ -44,15 +45,15 @@ article > *  {
     justify-self: right;
 }
 
-article p > em {
+article p > em, article a > em {
     color: var(--blue);
 }
 
-article p > strong {
+article p > strong, article a > strong {
     color: var(--yellow);
 }
 
-article p > em > strong {
+article p > em > strong, article a > em > strong {
     color: var(--red);
 }
 
@@ -159,6 +160,13 @@ article figure {
 article figure > figcaption {
     display: flex;
     flex-direction: row;
+    word-wrap: none;
+    text-wrap: nowrap;
+}
+
+article figure > figcaption > p {
+    margin: 0px;
+    text-wrap: wrap;
 }
 
 article h2::before {
@@ -191,7 +199,7 @@ article h4::after, article h5::after, article h6::after {
 }
 
 article figure > figcaption::before {
-    content: "\00a0└─► Fig " counter(section, upper-roman) "." counter(figure, lower-latin) ")\00a0";
+    content: "\00a0\00a0└─►\00a0";
     text-wrap: nowrap;
     color: var(--base6);
 }
