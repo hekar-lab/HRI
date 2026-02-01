@@ -31,10 +31,10 @@ seems like as great way to start.
 Counting is the process of going from one number to the next. To do so we increment
 the number by one. In this process we first set the unit digit to the next digit
 of the base (e.g. from 4 to 5), unless it is the last digit of our base 
-(i.e. 9 in base 10). In which case the units "rolls over", meaning it goes to the
-lowest digit of the base (i.e. 0 in base 10), and we increase the next digit (usually
+(i.e. 9 in decimal). In which case the units "rolls over", meaning it goes to the
+lowest digit of the base (i.e. 0 in decimal), and we increase the next digit (usually
 to the left) following the same operations.  
-For example to go from 99 to 100 in base 10, the unit 9 is increased which rolls over 
+For example to go from 99 to 100 in decimal, the unit 9 is increased which rolls over 
 which in turn increases the next 9 which also rolls over. This, in turn, increases the next
 digit from 0 to 1 -- as there is an infinity of 0s to the left of the number they
 are made implicit.  
@@ -47,7 +47,7 @@ one of itself times *b*, the next itself times *b²*, then *b³*, etc.
 
 This process of counting is thus applicable to base 2 otherwise known as binary.
 In binary, the digits are often represented by 0 and 1 -- though it could be any 
-2 symbols, we just use those because of the convention of base 10.  
+2 symbols, we just use those because of the convention of the decimal system.  
 {{< figref count-bin >}} 
 Shows and example of how to count in binary.
 
@@ -110,4 +110,6 @@ show how to count from 0 to 4 with finger binary.
 
 Oh that's\... really unfortunate.  
 
-You know what? Forget about it. Base 10 is alright.
+You know what? Forget about it. Base 10 is alright[^true].
+
+[^true]: Which is always true (e.g. [XKCD N°953](https://xkcd.com/953/))

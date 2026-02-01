@@ -2,8 +2,8 @@
 id: 'TCEAKDECB'
 title: To build the ideal decompiler
 date: '2026-01-11T18:47:23'
-author: REDACTED
-layout: Dr. Eugene Severer
+author: Dr. Eugene Severer
+layout: article
 draft: false
 ---
 

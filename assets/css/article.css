@@ -209,6 +209,11 @@ article sup {
     vertical-align: inherit;
 }
 
+article span.censored {
+    display: inline;
+    background-color: var(--base8);
+}
+
 canvas.pixeltex {
     width: var(--img-max-width);
     image-rendering: pixelated;
