@@ -1,10 +1,10 @@
 ---
 id: 'ACEBFNILG'
-title: Stop using illegal numbers
+title: Stop using ███████ numbers
 date: '2026-02-01T09:04:42'
 author: Dr. ███████
 layout: article
-draft: true
+draft: false
 ---
 
 {{< censored >}}It has come to our attention we are most likely using illegal numbers{{< /censored >}}[^ill] 
